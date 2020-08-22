@@ -21,6 +21,7 @@ public class TicTacToe
 				System.out.println("---------");
 		}
 	}
+/*
            public static void tossForTurnAndChoose()
 	{
 		int turn = random.nextInt(2);
@@ -40,12 +41,11 @@ public class TicTacToe
 			System.out.println("Computer won the toss");
                         System.out.println("Computer choose O");
 		}
-	}
+	}*/
              public static void main(String[] args)
 	     {
-                System.out.println("your board is ready");
+                System.out.println("your board is ready where you want to place mark");
 		resettingBoard();
-                tossForTurnAndChoose();
 	     }
 }
 
