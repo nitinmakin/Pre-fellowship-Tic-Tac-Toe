@@ -1,6 +1,9 @@
 import java.util.Scanner;
+import java.util.Random;
 public class TicTacToe
 {
+
+        static Random random=new Random();
 	public static void resettingBoard()
 	{
 		int arr[][]=new int[3][3];
@@ -17,9 +20,22 @@ public class TicTacToe
 				System.out.println("---------");
 		}
 	}
+           public static void tossForTurn()
+	{
+		int turn = random.nextInt(2);
+		if(turn == 0)
+		{
+			System.out.println("Player won the toss");
+		}
+		else
+		{
+			System.out.println("Computer won the toss");
+		}
+	}
              public static void main(String[] args)
 	     {
 		resettingBoard();
+                tossForTurn();
 	     }
 }
 
