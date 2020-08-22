@@ -1,51 +1,193 @@
-import java.util.Scanner;
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 public class TicTacToe
 {
+	static Random random=new Random();
+	static Scanner scanner=new Scanner(System.in);
+	static String arr[][]=new String[3][3];
+	//refreshing board and printing board
 
-        static Random random=new Random();
-        static Scanner scanner=new Scanner(System.in);
-	public static void resettingBoard()
+
+	public static int tossForChance()
 	{
-		int arr[][]=new int[3][3];
+		int result=random.nextInt(2);
+		if(result == 0)
+		{
+			System.out.println("Player won the toss ");
+			return 0;
+		}
+
+		else
+			System.out.println("computer won the toss");
+		return 1;
+	}
+
+
+	public static int chooseOfMark()
+	{
+		int choose = tossForChance();
+
+		if (choose == 0)
+		{   
+			System.out.println("press 1 for choosing X  or  press 2 for choosing  O");
+			int mark=scanner.nextInt();
+			if(mark == 1)
+			{
+				System.out.println("you have choose X");
+				return 1;
+			}
+			else
+			{
+				System.out.println("you have choose O");
+				return 2;
+			}
+		}
+
+		else
+			System.out.println("computer has won the toss and choose O");
+		return 0;
+	}
+
+	public static String[][] resetBoard()
+	{
 		for (int i = 0; i < arr.length; i++)
 		{
 			for (int j = 0; j < arr.length; j++)
 			{
-				System.out.print(arr[i][j]);
-				if(j == 0 || j == 1)
-					System.out.print(" | ");
+				arr[i][j]=" ";
 			}	
+		}
+		System.out.println("BOARD IS REFRESHED");
+		return arr;
+	}
+	public static void displayRefreshedBoard()
+	{
+		String arr[][]=resetBoard();
+
+		for (int i = 0; i < arr.length; i++) 
+		{
+			for (int j = 0; j < arr.length; j++)
+			{
+				System.out.print(arr[i][j]+" | ");	
+			}	System.out.println();
 			System.out.println();
-			if(i == 0 || i == 1)
-				System.out.println("---------");
+		}
+
+	}
+
+	public static void playerPlayGame()
+	{
+		int mark1=chooseOfMark();
+		System.out.println("enter no where  you want to place mark");
+		int mark=scanner.nextInt();
+		if(mark == 1 )
+		{
+			if(arr[0][0].equals(" ") && mark1 == 2)
+				arr[0][0]= "O";
+
+			else if(arr[0][0].equals(" ") )
+				arr[0][0]= "X";
+
+			else
+				System.out.println("enter valid position");
+		}
+
+		else if(mark == 2 )
+		{
+			if(arr[0][1].equals(" ") && mark1 == 2)
+				arr[0][1]="O";
+			else if(arr[0][1].equals(" "))
+				arr[0][1]="X";
+			else
+				System.out.println("enter correct position");
+		}
+
+		else if(mark == 3 )
+		{
+			if(arr[0][2].equals(" ") && mark1 == 2)
+				arr[0][2]="O";
+
+			else if(arr[0][2].equals(" "))
+				arr[0][2]="X";
+			else
+				System.out.println("enter valid position");
+		}
+		else if(mark == 4 )
+		{
+			if(arr[1][0].equals(" ") && mark1 == 2)
+				arr[1][0]="O";
+
+			else if(arr[1][0].equals(" "))
+				arr[1][0]="X";
+			else
+				System.out.println("enter valid position");
+		}
+		else if(mark == 5 )
+		{
+			if(arr[1][1].equals(" ") && mark1 == 2)
+				arr[1][1]="O";
+			else if(arr[1][1].equals(" "))
+				arr[1][1]="X";
+			else
+				System.out.println("enter valid position");
+		}
+		else if(mark == 6 )
+		{
+			if(arr[1][2].equals(" ") && mark1 == 2)
+				arr[1][2]="O";
+			else if(arr[1][2].equals(" "))
+				arr[1][2]="X";
+			else
+				System.out.println("enter valid position");
+		}
+		else if(mark == 7 )
+		{  
+			if(arr[2][0].equals(" ") && mark1 == 2)
+				arr[2][0]="O";
+			else if(arr[2][0].equals(" "))
+				arr[2][0]="X";
+			else
+				System.out.println("enter valid position");
+		}
+		else if(mark == 8 )
+		{
+			if(arr[2][1].equals(" ") && mark1 == 2)
+				arr[2][1]="O";
+			else if(arr[2][1].equals(" "))
+				arr[2][1]="X";
+			else
+				System.out.println("enter valid position");
+		}
+		else if(mark == 9 )
+		{
+			if(arr[2][2].equals(" ") && mark1 == 2)
+				arr[2][2]="O";
+			else if(arr[2][2].equals(" "))
+				arr[2][2]="X";
+			else
+				System.out.println("enter valid position");
+		}
+
+
+
+		for (int i = 0; i < arr.length; i++) 
+		{
+			for (int j = 0; j < arr.length; j++)
+			{
+				System.out.print(arr[i][j]+" | ");	
+			}	System.out.println();
+			System.out.println();
 		}
 	}
-/*
-           public static void tossForTurnAndChoose()
-	{
-		int turn = random.nextInt(2);
-		if(turn == 0)
-		{
-			System.out.println("Player won the toss");
-                        System.out.println("choose what you want to take O or X");
-                        String option=scanner.next();
-                         if(option.equalsIgnoreCase("x"))
-                          System.out.println("you have choose X");
-                         else
-                          System.out.println("you have choose O");
 
-		}
-		else
-		{
-			System.out.println("Computer won the toss");
-                        System.out.println("Computer choose O");
-		}
-	}*/
-             public static void main(String[] args)
-	     {
-                System.out.println("your board is ready where you want to place mark");
-		resettingBoard();
-	     }
+
+	public static void main(String[] args)
+	{
+		displayRefreshedBoard();
+		playerPlayGame();
+	}
+
 }
+
 
