@@ -82,7 +82,7 @@ public class TicTacToe
 
 			{
 				int mark=scanner.nextInt();
-				if(mark == 1 && arr[0][0].equals(" ") )
+				if(mark == 1 && arr[0][0].equals(" ") )//for position 1(Frist corner)
 				{
 					arr[0][0] =  "X";
 					temp = 1;
@@ -90,22 +90,22 @@ public class TicTacToe
 
 				}
 
-				else if(mark == 2 && arr[0][1].equals(" "))
+				/*else if(mark == 2 && arr[0][1].equals(" "))
 				{
 					arr[0][1] = "X";
 					temp = 1;
 					System.out.println("you have placed your  mark on "+mark);
 
-				}
+				}*/
 
-				else if(mark == 3 && arr[0][2].equals(" ") )
+				else if(mark == 3 && arr[0][2].equals(" ") ) //for position 2(Second corner)
 				{
 					arr[0][2] = "X";
 					temp = 1;
 					System.out.println("you have placed your  mark on "+mark);
 
 				}
-				else if(mark == 4 && arr[1][0].equals(" "))
+				/*else if(mark == 4 && arr[1][0].equals(" "))
 				{
 					arr[1][0] = "X";
 					temp = 1;
@@ -125,22 +125,22 @@ public class TicTacToe
 					temp = 1;
 					System.out.println("you have placed your  mark on "+mark);
 
-				}
-				else if(mark == 7 && arr[2][0].equals(" "))
+				}*/
+				else if(mark == 7 && arr[2][0].equals(" "))//for position  7 (Third corner)
 				{  
 					arr[2][0] =  "X";
 					temp = 1;
 					System.out.println("you have placed your  mark on "+mark);
 
 				}
-				else if(mark == 8 && arr[2][1].equals(" "))
+				/*else if(mark == 8 && arr[2][1].equals(" "))
 				{
 					arr[2][1] = "X";
 					temp = 1;
 					System.out.println("you have placed your  mark on "+mark);
 
-				}
-				else if(mark == 9 && arr[2][2].equals(" "))
+				}*/
+				else if(mark == 9 && arr[2][2].equals(" "))//for position 9(last corner)
 				{
 					arr[2][2] = "X";
 					temp = 1;
@@ -164,14 +164,14 @@ public class TicTacToe
 			while(temp != 1)
 			{
 
-				if( arr[0][0].equals(" "))//for position 1
+				if( arr[0][0].equals(" "))//for position 1(frist corner)
 				{
 					arr[0][0] = "O";
 					temp = 1;
 					System.out.println("computer has placed his mark on 1");
 
 				}
-				else if( arr[0][2].equals(" "))//for position 3
+				else if( arr[0][2].equals(" "))//for position 3(second corner)
 				{
 					arr[0][2] = "O";
 					temp = 1;
@@ -179,7 +179,7 @@ public class TicTacToe
 
 				}
 
-				else if( arr[2][0].equals(" "))//for position 7
+				else if( arr[2][0].equals(" "))//for position 7(Third corner)
 				{
 					arr[2][0] = "O";
 					temp = 1;
@@ -189,7 +189,7 @@ public class TicTacToe
 
 
 
-				else if( arr[2][2].equals(" "))//for position 9
+				else if( arr[2][2].equals(" "))//for position 9(last corner)
 				{
 					arr[2][2] = "O";
 					temp = 1;
@@ -197,7 +197,7 @@ public class TicTacToe
 
 				}
 
-				else if(arr[1][1].equals(" "))//for position 5
+			/*	else if(arr[1][1].equals(" "))//for position 5
 				{
 					arr[1][1] = "O";
 					temp = 1;
@@ -238,7 +238,7 @@ public class TicTacToe
 					temp = 1;
 					System.out.println("computer has placed his mark on 8");
 
-				}
+				}*/
 			}
 		}
 		for (int i = 0; i < arr.length; i++) 
