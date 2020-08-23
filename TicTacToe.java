@@ -111,14 +111,14 @@ public class TicTacToe
 					temp = 1;
 					System.out.println("you have placed your  mark on "+mark);
 
-				}
-				else if(mark == 5 && arr[1][1].equals(" ") )
+				}*/
+				else if(mark == 5 && arr[1][1].equals(" ") )// for position 5(mark on middle)
 				{
 					arr[1][1] = "X";
 					temp = 1;
 					System.out.println("you have placed your  mark on "+mark);
 
-				}
+				}/*
 				else if(mark == 6 && arr[1][2].equals(" ") )
 				{
 					arr[1][2] = "X";
@@ -197,7 +197,7 @@ public class TicTacToe
 
 				}
 
-			/*	else if(arr[1][1].equals(" "))//for position 5
+				else if(arr[1][1].equals(" "))//for position 5(mark on middle)
 				{
 					arr[1][1] = "O";
 					temp = 1;
@@ -206,7 +206,7 @@ public class TicTacToe
 				}
 
 
-				else if( arr[0][1].equals(" "))//for position 2
+				/*else if( arr[0][1].equals(" "))//for position 2
 				{
 					arr[0][1] = "O";
 					temp = 1;
